@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+streamlit
+pinecone
+langchain-ibm
+python-dotenv
+requests
+google-auth-oauthlib
+google-api-python-client
+
+
