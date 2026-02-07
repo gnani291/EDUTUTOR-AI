@@ -1,19 +1,19 @@
 import streamlit as st
 import requests
-from edututor.watsonx_client import generate_quiz  # ✅ Ensure this function is working
+from edututor.watsonx_client import generate_quiz  
 
 st.set_page_config(page_title="EduTutor Quiz", layout="centered")
 st.title("🧠 EduTutor - Take a Quiz")
 
-# 👤 Get user ID once
+#  Get user ID once
 if "user_id" not in st.session_state:
     st.session_state["user_id"] = st.text_input("👤 Enter your User ID", "user_001")
 
-# 📚 Get topic and question count
+# Get topic and question count
 topic = st.text_input("📚 Enter topic for quiz:", "Machine Learning")
 num_questions = st.slider("🔢 Number of questions:", 1, 10, 5)
 
-# 🚀 Generate quiz
+#  Generate quiz
 if st.button("🚀 Generate Quiz"):
     with st.spinner("Generating quiz from WatsonX..."):
         try:
@@ -23,7 +23,7 @@ if st.button("🚀 Generate Quiz"):
         except Exception as e:
             st.error(f"❌ Failed to generate quiz: {e}")
 
-# 📄 Show quiz
+# Show quiz
 if "quiz" in st.session_state and not st.session_state.get("submitted", False):
     st.header(f"📄 Quiz on: {topic}")
     answers = []
@@ -36,7 +36,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
 
         submitted = st.form_submit_button("✅ Submit Quiz")
 
-    # ✅ Evaluation
+    # Evaluation
     if submitted:
         correct = 0
         result_display = []
@@ -50,7 +50,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         st.session_state["submitted"] = True
         st.success(f"🎯 Your Score: {correct}/{len(answers)}")
 
-        # 📤 Submit to backend
+        # Submit to backend
         embedding = [round(0.01 * i, 4) for i in range(1024)]  # Simulated embedding
         payload = {
             "user_id": st.session_state["user_id"],
@@ -68,7 +68,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         except Exception as e:
             st.error(f"❌ Backend error: {e}")
 
-        # 📊 Show review
+        # Show review
         st.header("📊 Review:")
         for i, question, chosen, correct_ans, status in result_display:
             st.write(f"**Q{i}: {question}**")
@@ -77,8 +77,9 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
             st.markdown(f"- ✅ **Correct!**" if status else "- ❌ **Incorrect**")
             st.markdown("---")
 
-# 🔁 Retry option
+#  Retry option
 if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
