@@ -26,7 +26,7 @@ if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
 index = pc.Index(INDEX_NAME)
 
 
-# ✅ Core upsert function
+# Core upsert function
 def upsert_vector(vector_id: str, values: list[float], metadata: dict = None):
     index.upsert(vectors=[{
         "id": vector_id,
@@ -35,13 +35,13 @@ def upsert_vector(vector_id: str, values: list[float], metadata: dict = None):
     }])
 
 
-# ✅ Store user profile embedding
+# Store user profile embedding
 def store_user_profile_embedding(user_id: str, embedding: list[float], metadata: dict):
     vector_id = f"user_{user_id}"
     upsert_vector(vector_id=vector_id, values=embedding, metadata=metadata)
 
 
-# ✅ Store quiz metadata with full info
+# Store quiz metadata with full info
 def store_quiz_metadata(user_id: str, topic: str, score: int, embedding: list[float],
                         questions: list[str] = None, answers: list[str] = None):
     timestamp = datetime.now().isoformat()
@@ -57,7 +57,7 @@ def store_quiz_metadata(user_id: str, topic: str, score: int, embedding: list[fl
     upsert_vector(vector_id=vector_id, values=embedding, metadata=metadata)
 
 
-# ✅ Retrieve quiz history for a user
+# Retrieve quiz history for a user
 def get_user_quiz_history(user_id: str, top_k: int = 50):
     try:
         results = index.query(
@@ -81,3 +81,4 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
