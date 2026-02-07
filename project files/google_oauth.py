@@ -1,7 +1,6 @@
 import os
 from authlib.integrations.requests_client import OAuth2Session
 
-# ✅ Securely retrieve secrets from environment variables
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 REDIRECT_URI = os.getenv("REDIRECT_URI", "http://localhost:8501")
@@ -44,4 +43,5 @@ def get_user_info(code):
     )
     resp = google.get(USERINFO_ENDPOINT)
     return resp.json(), token["access_token"]
+
 
