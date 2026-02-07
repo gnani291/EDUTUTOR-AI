@@ -22,9 +22,6 @@ def get_quiz(topic: str = Query(..., description="Topic to generate quiz for")):
         return {"topic": topic, "quiz": quiz}
     except Exception as e:
         return {"error": str(e)}
-
-
-# ✅ Updated model to include questions & answers
 class QuizSubmission(BaseModel):
     user_id: str
     topic: str
@@ -57,4 +54,5 @@ def get_quiz_history(user_id: str):
         return {"user_id": user_id, "quiz_history": history}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
