@@ -8,7 +8,6 @@ api_key = os.getenv("WATSONX_API_KEY")
 if not api_key:
     raise ValueError("WATSONX_API_KEY not found in environment variables.")
 
-# ✅ IBM IAM token endpoint
 url = "https://iam.cloud.ibm.com/identity/token"
 
 # ✅ Request IAM token using API key
@@ -24,5 +23,6 @@ response = requests.post(
 # ✅ Print response
 print(response.status_code)
 print(response.text)
+
 
 
