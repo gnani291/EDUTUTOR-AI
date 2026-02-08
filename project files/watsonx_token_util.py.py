@@ -10,7 +10,6 @@ if not api_key:
 
 url = "https://iam.cloud.ibm.com/identity/token"
 
-# ✅ Request IAM token using API key
 response = requests.post(
     url,
     data={
@@ -23,6 +22,7 @@ response = requests.post(
 # ✅ Print response
 print(response.status_code)
 print(response.text)
+
 
 
 
