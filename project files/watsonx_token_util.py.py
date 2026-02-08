@@ -19,9 +19,9 @@ response = requests.post(
     headers={"Content-Type": "application/x-www-form-urlencoded"}
 )
 
-# ✅ Print response
 print(response.status_code)
 print(response.text)
+
 
 
 
