@@ -3,7 +3,6 @@ import requests
 from dotenv import load_dotenv
 load_dotenv()
 
-# ✅ Get the API key from environment variable
 api_key = os.getenv("WATSONX_API_KEY")
 
 if not api_key:
@@ -25,4 +24,5 @@ response = requests.post(
 # ✅ Print response
 print(response.status_code)
 print(response.text)
+
 
