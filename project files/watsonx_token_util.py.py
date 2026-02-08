@@ -1,8 +1,6 @@
 import os
 import requests
 from dotenv import load_dotenv
-
-# ✅ Load environment variables from .env file
 load_dotenv()
 
 # ✅ Get the API key from environment variable
@@ -27,3 +25,4 @@ response = requests.post(
 # ✅ Print response
 print(response.status_code)
 print(response.text)
+
