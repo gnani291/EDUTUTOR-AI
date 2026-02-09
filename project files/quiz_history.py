@@ -3,7 +3,7 @@ from pinecone import Pinecone, ServerlessSpec
 import os
 import json
 
-pinecone = Pinecone(api_key="YOUR_API_KEY")  # Replace with your actual API key
+pinecone = Pinecone(api_key="YOUR_API_KEY")  
 index = pinecone.Index("quiz-submissions")  # Replace with your actual index name
 
 # Utility function to fetch quiz history for a user
@@ -61,4 +61,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
