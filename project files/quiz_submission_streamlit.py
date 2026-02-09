@@ -9,7 +9,6 @@ if "user_id" not in st.session_state:
 topic = st.text_input("📚 Enter topic for quiz:", "Machine Learning")
 num_questions = st.slider("🔢 Number of questions:", 1, 10, 5)
 
-#  Generate quiz
 if st.button("🚀 Generate Quiz"):
     with st.spinner("Generating quiz from WatsonX..."):
         try:
@@ -78,6 +77,7 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
