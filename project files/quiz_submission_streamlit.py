@@ -6,8 +6,6 @@ st.set_page_config(page_title="EduTutor Quiz", layout="centered")
 st.title("🧠 EduTutor - Take a Quiz")
 if "user_id" not in st.session_state:
     st.session_state["user_id"] = st.text_input("👤 Enter your User ID", "user_001")
-
-# Get topic and question count
 topic = st.text_input("📚 Enter topic for quiz:", "Machine Learning")
 num_questions = st.slider("🔢 Number of questions:", 1, 10, 5)
 
@@ -80,5 +78,6 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
