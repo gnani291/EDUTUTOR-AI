@@ -4,8 +4,6 @@ from edututor.watsonx_client import generate_quiz
 
 st.set_page_config(page_title="EduTutor Quiz", layout="centered")
 st.title("🧠 EduTutor - Take a Quiz")
-
-#  Get user ID once
 if "user_id" not in st.session_state:
     st.session_state["user_id"] = st.text_input("👤 Enter your User ID", "user_001")
 
@@ -82,4 +80,5 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
