@@ -30,7 +30,6 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
 
         submitted = st.form_submit_button("✅ Submit Quiz")
 
-    # Evaluation
     if submitted:
         correct = 0
         result_display = []
@@ -76,6 +75,7 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
