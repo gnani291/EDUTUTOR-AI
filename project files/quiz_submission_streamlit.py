@@ -18,7 +18,6 @@ if st.button("🚀 Generate Quiz"):
         except Exception as e:
             st.error(f"❌ Failed to generate quiz: {e}")
 
-# Show quiz
 if "quiz" in st.session_state and not st.session_state.get("submitted", False):
     st.header(f"📄 Quiz on: {topic}")
     answers = []
@@ -77,6 +76,7 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
