@@ -69,11 +69,11 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
             st.markdown(f"- ✅ **Correct!**" if status else "- ❌ **Incorrect**")
             st.markdown("---")
 
-#  Retry option
 if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
