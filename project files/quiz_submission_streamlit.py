@@ -43,7 +43,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         st.session_state["submitted"] = True
         st.success(f"🎯 Your Score: {correct}/{len(answers)}")
 
-        # Submit to backend
+
         embedding = [round(0.01 * i, 4) for i in range(1024)]  # Simulated embedding
         payload = {
             "user_id": st.session_state["user_id"],
@@ -73,6 +73,7 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
