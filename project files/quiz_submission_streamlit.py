@@ -61,7 +61,6 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         except Exception as e:
             st.error(f"❌ Backend error: {e}")
 
-        # Show review
         st.header("📊 Review:")
         for i, question, chosen, correct_ans, status in result_display:
             st.write(f"**Q{i}: {question}**")
@@ -75,6 +74,7 @@ if st.session_state.get("submitted", False):
     if st.button("🔄 Try Another Quiz"):
         del st.session_state["quiz"]
         st.session_state["submitted"] = False
+
 
 
 
