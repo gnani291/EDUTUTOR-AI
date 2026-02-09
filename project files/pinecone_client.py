@@ -3,7 +3,6 @@ from datetime import datetime
 from pinecone import Pinecone, ServerlessSpec
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
 # Pinecone credentials
@@ -81,4 +80,5 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
