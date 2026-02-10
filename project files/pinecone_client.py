@@ -30,7 +30,6 @@ def upsert_vector(vector_id: str, values: list[float], metadata: dict = None):
     }])
 
 
-# Store user profile embedding
 def store_user_profile_embedding(user_id: str, embedding: list[float], metadata: dict):
     vector_id = f"user_{user_id}"
     upsert_vector(vector_id=vector_id, values=embedding, metadata=metadata)
@@ -76,6 +75,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
