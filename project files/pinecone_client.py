@@ -10,7 +10,6 @@ INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
-# Create index if not exists
 if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
     pc.create_index(
         name=INDEX_NAME,
@@ -78,6 +77,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
