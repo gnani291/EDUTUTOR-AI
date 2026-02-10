@@ -34,8 +34,6 @@ def store_user_profile_embedding(user_id: str, embedding: list[float], metadata:
     vector_id = f"user_{user_id}"
     upsert_vector(vector_id=vector_id, values=embedding, metadata=metadata)
 
-
-# Store quiz metadata with full info
 def store_quiz_metadata(user_id: str, topic: str, score: int, embedding: list[float],
                         questions: list[str] = None, answers: list[str] = None):
     timestamp = datetime.now().isoformat()
@@ -75,6 +73,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
