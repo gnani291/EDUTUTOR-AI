@@ -8,7 +8,6 @@ load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
-# Initialize Pinecone client
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
 # Create index if not exists
@@ -79,6 +78,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
