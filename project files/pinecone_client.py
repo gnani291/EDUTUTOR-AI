@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Pinecone credentials
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
@@ -80,5 +79,6 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
