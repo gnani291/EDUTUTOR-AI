@@ -18,7 +18,6 @@ if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
         spec=ServerlessSpec(cloud="aws", region="us-east-1")
     )
 
-# Connect to index
 index = pc.Index(INDEX_NAME)
 
 
@@ -77,6 +76,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
