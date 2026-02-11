@@ -18,7 +18,7 @@ def fetch_quiz_history(user_id):
         if not results.matches:
             return []
 
-        # Extract metadata from results
+    
         history = []
         for match in results.matches:
             metadata = match['metadata']
@@ -60,6 +60,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
