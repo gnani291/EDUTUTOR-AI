@@ -33,7 +33,6 @@ def fetch_quiz_history(user_id):
         st.error(f"Error fetching history: {str(e)}")
         return []
 
-# Streamlit App
 def main():
     st.title("📜 Quiz History")
 
@@ -60,6 +59,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
