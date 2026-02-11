@@ -36,7 +36,7 @@ def fetch_quiz_history(user_id):
 def main():
     st.title("📜 Quiz History")
 
-    # Ask user for email or ID (in real app, this should come from login session)
+
     user_id = st.text_input("Enter your Email or Student ID", key="quiz_history_input")
 
     if st.button("Fetch Quiz History"):
@@ -59,6 +59,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
