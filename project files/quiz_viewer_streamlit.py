@@ -4,7 +4,6 @@ from pinecone_client import get_quiz_by_topic
 st.set_page_config(page_title="EduTutor Quiz Viewer", layout="centered")
 st.title("📚 EduTutor - View Quiz by Topic")
 
-# Input from user
 topic = st.text_input("Enter a quiz topic:", placeholder="e.g., Machine Learning")
 
 if st.button("Fetch Quiz"):
@@ -25,3 +24,4 @@ if st.button("Fetch Quiz"):
                     st.markdown(f"- {option}")
                 st.markdown(f"**✅ Answer:** {quiz['answer']}")
                 st.caption(f"🔎 Relevance Score: {quiz['score']:.4f}")
+
