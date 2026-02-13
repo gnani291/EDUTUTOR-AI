@@ -16,7 +16,6 @@ if "logged_in" not in st.session_state:
 if "access_token" not in st.session_state:
     st.session_state["access_token"] = None
 
-# Google OAuth Login Flow
 if not st.session_state["logged_in"]:
     if st.sidebar.button("Login with Google"):
         auth_url, state = get_authorization_url()
@@ -200,6 +199,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
