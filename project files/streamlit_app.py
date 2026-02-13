@@ -8,7 +8,6 @@ from googleapiclient.discovery import build
 st.set_page_config(page_title="EduTutor Unified App", layout="wide")
 st.title("🎓 EduTutor - Unified Learning Dashboard")
 
-# Sidebar Login
 role = st.sidebar.radio("👥 Select your role", ["Student", "Educator"])
 st.sidebar.subheader("🔐 Login")
 
@@ -201,6 +200,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
