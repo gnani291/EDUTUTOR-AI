@@ -38,7 +38,6 @@ else:
 
 user_id = st.session_state.get("user_email", "user_001")
 
-# =======================
 # === STUDENT VIEW =====
 # =======================
 if role == "Student":
@@ -199,6 +198,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
