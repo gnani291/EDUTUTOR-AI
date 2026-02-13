@@ -38,7 +38,6 @@ else:
 
 user_id = st.session_state.get("user_email", "user_001")
 
-# === STUDENT VIEW =====
 if role == "Student":
     st.header("📘 Student Dashboard")
     tab1, tab2, tab3 = st.tabs(["📝 Take Quiz", "📄 Quiz History", "🏫 Google Classroom"])
@@ -197,6 +196,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
