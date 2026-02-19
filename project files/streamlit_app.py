@@ -114,7 +114,7 @@ if role == "Student":
                 del st.session_state["quiz"]
                 st.session_state["submitted"] = False
 
-    # === TAB 2: Quiz History ===
+    #Quiz History
     with tab2:
         st.subheader("📄 Your Quiz History")
         try:
@@ -196,6 +196,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
