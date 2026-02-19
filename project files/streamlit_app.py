@@ -163,9 +163,7 @@ if role == "Student":
         else:
             st.warning("Login to view classroom data.")
 
-# ========================
-# === EDUCATOR VIEW =====
-# ========================
+#EDUCATOR VIEW
 elif role == "Educator":
     st.header("📊 Educator Dashboard")
     st.success("🧠 Analytics for student quizzes will appear here.")
@@ -196,6 +194,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
