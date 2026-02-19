@@ -42,7 +42,7 @@ if role == "Student":
     st.header("📘 Student Dashboard")
     tab1, tab2, tab3 = st.tabs(["📝 Take Quiz", "📄 Quiz History", "🏫 Google Classroom"])
 
-    # === TAB 1: Take Quiz ===
+    # Take Quiz
     with tab1:
         topic = st.text_input("Enter quiz topic", "Machine Learning")
         num_questions = st.slider("Number of questions", 1, 10, 5)
@@ -196,6 +196,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
