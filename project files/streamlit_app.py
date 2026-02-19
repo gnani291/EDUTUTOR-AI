@@ -139,7 +139,7 @@ if role == "Student":
         except Exception as e:
             st.error(f"❌ Error connecting to backend: {e}")
 
-    # === TAB 3: Google Classroom ===
+    #Google Classroom
     with tab3:
         st.subheader("🏫 Your Google Classroom Courses")
         if st.session_state.get("access_token"):
@@ -196,6 +196,7 @@ elif role == "Educator":
             st.error(f"❌ Google Classroom Error: {e}")
     else:
         st.warning("Login to view Google Classroom data.")
+
 
 
 
