@@ -21,7 +21,6 @@ if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
 index = pc.Index(INDEX_NAME)
 
 
-# Core upsert function
 def upsert_vector(vector_id: str, values: list[float], metadata: dict = None):
     index.upsert(vectors=[{
         "id": vector_id,
@@ -73,6 +72,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
