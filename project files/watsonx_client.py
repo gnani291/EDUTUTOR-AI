@@ -111,7 +111,6 @@ def get_model_response(prompt, topic):
             "error": str(e)
         }
 
-# ✅ Add this: Function to be used in Streamlit UI
 def generate_quiz(topic: str, num_questions: int):
     prompt = f"""
     Generate {num_questions} multiple-choice questions on the topic "{topic}".
@@ -145,5 +144,6 @@ def generate_quiz(topic: str, num_questions: int):
         return quiz_data
     else:
         raise Exception(result.get("error", "Unknown error during quiz generation."))
+
 
 
