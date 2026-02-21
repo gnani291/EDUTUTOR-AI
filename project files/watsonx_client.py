@@ -6,10 +6,8 @@ import logging
 from dotenv import load_dotenv
 from ibm_watsonx_ai.foundation_models import ModelInference
 
-# Load .env variables
 load_dotenv()
 
-# WatsonX config
 API_KEY = os.getenv("WATSONX_API_KEY")
 PROJECT_ID = os.getenv("PROJECT_ID")
 API_URL = os.getenv("WATSONX_URL")
@@ -147,4 +145,5 @@ def generate_quiz(topic: str, num_questions: int):
         return quiz_data
     else:
         raise Exception(result.get("error", "Unknown error during quiz generation."))
+
 
