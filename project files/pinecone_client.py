@@ -46,9 +46,6 @@ def store_quiz_metadata(user_id: str, topic: str, score: int, embedding: list[fl
         "answers": answers or []
     }
     upsert_vector(vector_id=vector_id, values=embedding, metadata=metadata)
-
-
-# Retrieve quiz history for a user
 def get_user_quiz_history(user_id: str, top_k: int = 50):
     try:
         results = index.query(
@@ -72,6 +69,7 @@ def get_user_quiz_history(user_id: str, top_k: int = 50):
     except Exception as e:
         print(f"❌ Error fetching history: {e}")
         return []
+
 
 
 
