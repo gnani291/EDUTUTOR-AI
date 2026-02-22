@@ -34,7 +34,6 @@ def get_user_info(code):
     )
     token = google.fetch_token(TOKEN_ENDPOINT, code=code)
 
-    # Reinitialize session with token for authenticated request
     google = OAuth2Session(
         GOOGLE_CLIENT_ID,
         GOOGLE_CLIENT_SECRET,
@@ -43,5 +42,6 @@ def get_user_info(code):
     )
     resp = google.get(USERINFO_ENDPOINT)
     return resp.json(), token["access_token"]
+
 
 
