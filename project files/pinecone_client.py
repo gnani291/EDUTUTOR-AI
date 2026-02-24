@@ -49,7 +49,7 @@ def store_quiz_metadata(user_id: str, topic: str, score: int, embedding: list[fl
 def get_user_quiz_history(user_id: str, top_k: int = 50):
     try:
         results = index.query(
-            vector=[0.0] * 1024,  # dummy vector with correct dimension
+            vector=[0.0] * 1024,
             filter={"user_id": {"$eq": user_id}},
             top_k=top_k,
             include_metadata=True
