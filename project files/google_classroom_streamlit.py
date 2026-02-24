@@ -27,7 +27,7 @@ def main():
         creds = login_with_popup()
         st.session_state["credentials"] = creds
         st.success("✅ Logged in successfully!")
-        st.rerun()  # ✅ Use this instead of experimental_rerun
+        st.rerun()
 
 
     else:
