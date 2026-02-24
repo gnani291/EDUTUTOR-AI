@@ -44,7 +44,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         st.success(f"🎯 Your Score: {correct}/{len(answers)}")
 
 
-        embedding = [round(0.01 * i, 4) for i in range(1024)]  # Simulated embedding
+        embedding = [round(0.01 * i, 4) for i in range(1024)] 
         payload = {
             "user_id": st.session_state["user_id"],
             "topic": topic,
