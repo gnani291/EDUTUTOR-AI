@@ -34,7 +34,7 @@ if "quiz" in st.session_state and not st.session_state.get("submitted", False):
         correct = 0
         result_display = []
         for idx, (q, selected) in enumerate(answers):
-            selected_letter = selected.split(".")[0].strip()  # Extract option letter (e.g., "A")
+            selected_letter = selected.split(".")[0].strip()
             is_correct = selected_letter == q["answer"]
             if is_correct:
                 correct += 1
