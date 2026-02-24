@@ -13,7 +13,7 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
     pc.create_index(
         name=INDEX_NAME,
-        dimension=1024,  # ⚠️ Updated to match embedding size
+        dimension=1024, 
         metric="cosine",
         spec=ServerlessSpec(cloud="aws", region="us-east-1")
     )
