@@ -20,7 +20,6 @@ if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
 
 index = pc.Index(INDEX_NAME)
 
-
 def upsert_vector(vector_id: str, values: list[float], metadata: dict = None):
     index.upsert(vectors=[{
         "id": vector_id,
