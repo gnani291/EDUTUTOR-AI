@@ -6,7 +6,6 @@ from pinecone_client import (
     store_quiz_metadata,
     get_user_quiz_history
 )
-
 app = FastAPI()
 
 @app.get("/")
