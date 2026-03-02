@@ -9,7 +9,6 @@ from pinecone_client import (
 
 app = FastAPI()
 
-
 @app.get("/")
 def root():
     return {"message": "EduTutor AI Backend is running."}
