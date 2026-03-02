@@ -27,7 +27,6 @@ class QuizSubmission(BaseModel):
     questions: List[str]
     answers: List[str]
 
-
 @app.post("/submit-quiz")
 def submit_quiz(data: QuizSubmission):
     try:
