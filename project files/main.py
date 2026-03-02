@@ -42,7 +42,6 @@ def submit_quiz(data: QuizSubmission):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @app.get("/user/{user_id}/quiz-history")
 def get_quiz_history(user_id: str):
     try:
