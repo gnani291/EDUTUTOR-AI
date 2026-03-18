@@ -54,7 +54,6 @@ def main():
                         st.markdown(f"**Q{q_num}:** {q}")
                         st.markdown(f"**Your Answer:** {a}")
                     st.markdown("---")
-
 if __name__ == "__main__":
     main()
 
