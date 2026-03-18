@@ -11,7 +11,6 @@ Generate exactly 5 multiple choice questions on the topic "{topic}" in strict JS
   }},
   ...
 ]
-
 Only return valid JSON. No explanation. No preface. No markdown. Just the JSON array.
 """
     return get_model_response(prompt, topic)
