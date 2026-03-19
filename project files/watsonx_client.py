@@ -1,4 +1,3 @@
-# watsonx_client.py
 import os
 import re
 import json
