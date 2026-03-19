@@ -6,7 +6,6 @@ payload = {
     "score": 7,
     "embedding": embedding
 }
-
 response = requests.post("http://localhost:8000/submit-quiz", json=payload)
 print("Status Code:", response.status_code)
 print("Response:", response.json())
