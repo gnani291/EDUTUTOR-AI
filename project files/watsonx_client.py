@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from ibm_watsonx_ai.foundation_models import ModelInference
 
 load_dotenv()
+
 API_KEY = os.getenv("WATSONX_API_KEY")
 PROJECT_ID = os.getenv("PROJECT_ID")
 API_URL = os.getenv("WATSONX_URL")
