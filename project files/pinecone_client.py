@@ -9,7 +9,6 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
-
 if INDEX_NAME not in [index.name for index in pc.list_indexes()]:
     pc.create_index(
         name=INDEX_NAME,
