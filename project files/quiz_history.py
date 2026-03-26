@@ -2,6 +2,7 @@ import streamlit as st
 from pinecone import Pinecone, ServerlessSpec
 import os
 import json
+
 pinecone = Pinecone(api_key="YOUR_API_KEY")  
 index = pinecone.Index("quiz-submissions")
 def fetch_quiz_history(user_id):
