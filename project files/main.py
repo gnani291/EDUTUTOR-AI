@@ -14,6 +14,7 @@ def root():
     return {"message": "EduTutor AI Backend is running."}
 
 @app.get("/quiz")
+
 def get_quiz(topic: str = Query(..., description="Topic to generate quiz for")):
     try:
         quiz = generate_quiz(topic)
