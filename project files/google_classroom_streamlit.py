@@ -4,6 +4,7 @@ from googleapiclient.discovery import build
 CLIENT_SECRETS_FILE = "client_secret.json"
 
 
+
 SCOPES = [
     "https://www.googleapis.com/auth/classroom.courses.readonly",
     "https://www.googleapis.com/auth/classroom.courseworkmaterials.readonly",
