@@ -1,6 +1,5 @@
 import requests
 
-
 embedding = [round(0.005 * i, 4) for i in range(1024)]  # Slightly different vector
 payload = {
     "user_id": "user_001",
