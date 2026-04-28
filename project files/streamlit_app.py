@@ -114,7 +114,7 @@ if role == "Student":
                 del st.session_state["quiz"]
                 st.session_state["submitted"] = False
 
-    #Quiz History
+    # Quiz History
     with tab2:
         st.subheader("📄 Your Quiz History")
         try:
