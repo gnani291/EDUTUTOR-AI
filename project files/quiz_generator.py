@@ -1,6 +1,5 @@
 from edututor.watsonx_client import get_model_response
 
-
 def generate_quiz(topic: str):
     prompt = f"""
 Generate exactly 5 multiple choice questions on the topic "{topic}" in strict JSON format.
