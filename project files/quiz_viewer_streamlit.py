@@ -1,7 +1,6 @@
 import streamlit as st
 from pinecone_client import get_quiz_by_topic
 
-
 st.set_page_config(page_title="EduTutor Quiz Viewer", layout="centered")
 st.title("📚 EduTutor - View Quiz by Topic")
 
