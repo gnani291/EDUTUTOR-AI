@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from edututor.watsonx_client import generate_quiz  
 
-
 st.set_page_config(page_title="EduTutor Quiz", layout="centered")
 st.title("🧠 EduTutor - Take a Quiz")
 if "user_id" not in st.session_state:
