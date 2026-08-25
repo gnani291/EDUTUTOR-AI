@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from typing import List
 from edututor.quiz_generator import generate_quiz
-
 from pinecone_client import (
     store_quiz_metadata,
     get_user_quiz_history
